@@ -3,7 +3,7 @@ describe('fundamentals test', () => {
     cy.visit('/fundamentals')
   })
   it('Contains correct header text', () => {
-    cy.get('[data-test="fundamentals-header"]').should('contain', 'Testing Fundamentals')
+    cy.getDataTest('fundamentals-header').should('contain', 'Testing Fundamentals')
   })
   it('Accordion works correctly', () => {
     cy.contains('Your tests will exist in a describe block.').should('not.be.visible')
